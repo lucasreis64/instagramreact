@@ -1,0 +1,557 @@
+/* PAGINA INTEIRA COM TAMANHO DO BODY */
+body{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: #fafafa;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* ELEMENTOS DO TOPO DA PÁGINA */
+
+.totaltopo {
+  position: fixed;
+  padding: 13px 0;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: 1;
+}
+
+.topo {
+  background-color: white;
+  margin: 0 auto;
+  width: 930px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.pesquisa {
+  background-color: #fafafa;
+  width: 215px;
+  height: 28px;
+  border-style: solid;
+  border-color: #dbdbdb;
+  border-width: 0.5px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 12px;
+  color: #979797;
+  outline: none;
+}
+
+.iconesesquerda {
+  width: 135px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+
+}
+
+.iconesesquerda img{
+  margin-top: 2px;
+}
+
+.iconesesquerda ion-icon {
+  margin-top:1px;
+}
+
+.iconesdireita {
+  width: 135px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+ion-icon,
+.iconesesquerda img,
+.pesquisa:hover {
+  cursor: pointer;
+}
+
+.linha {
+  background-color: #dbdbdb;
+  width: 1px;
+  height: 22px;
+}
+
+/* PARTE DOS STORIES, SIDEBAR E FEED */
+
+.inferior {
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONSTRUÇÃO DOS STORIES */
+.principal{
+  position: relative;
+}
+
+.stories {
+  background-color: white;
+  position: relative;
+  width: 614px;
+  height: 118px;
+  border-style: solid;
+  border-color: #dbdbdb;
+  border-width: 0.5px;
+  border-radius: 2px;
+  font-size: 12px;
+  margin-bottom: 24px;
+  padding-left: 17px;
+  padding-right: 17px;
+  height: 118px;
+  gap: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.stories div {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.circulostories {
+  width: 66px;
+  height: 66px;
+}
+
+.imgstories {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+}
+
+.stories div p {
+  margin-top: 5px;
+}
+
+.seta {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  left: 570px;
+  top: 41px;
+  filter: drop-shadow(2px 5px 4px darkgray);
+}
+
+#setaesquerda{
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  filter: drop-shadow(2px 5px 4px darkgray);
+  top:41px;
+  margin-left: 10px;
+}
+
+.stories div img:hover {
+  cursor: pointer;
+}
+
+/* CONSTRUÇÃO DO FEED */
+
+.feed {
+  width: 614px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.post {
+  background-color: white;
+  border-style: solid;
+  border-color: #dbdbdb;
+  border-width: 0.5px;
+  border-radius: 2px;
+  margin-bottom: 60px;
+}
+
+.posttop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 59px;
+  padding: 0 17px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.posttop div {
+  display: flex;
+  justify-content: flex-start;
+  width: 102px;
+}
+
+.posttop div img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.posttop h3 {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.post img {
+  width: 100%;
+}
+
+.post video {
+  width: 100%;
+}
+
+.postbottom1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 17px;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.postbottom1 div {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.postbottom2 {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+  justify-content: flex-start;
+  padding: 0 17px;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.postbottom2 img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.postbottom2 h3,
+.comentario {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.postbottom1 ion-icon {
+  font-size: 22px;
+}
+
+.comentario {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 17px;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.comentar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 17px;
+  align-items: center;
+  box-sizing: border-box;
+  border-top-style: solid;
+  border-color: #dbdbdb;
+  border-width: 0.5px;
+  border-radius: 2px;
+}
+
+.comentar div {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.comentar ion-icon {
+  font-size: 30px;
+}
+
+.comentar input {
+  border: 0px none;
+  outline: none;
+  width: 100%;
+}
+
+.comentar h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #cdeafd;
+}
+.comentar h2:hover {
+  color: #307aac;
+}
+
+.post h3:hover,
+.post img:hover,
+.post p:hover,
+.post h2:hover {
+  cursor: pointer;
+}
+
+/* CONSTRUÇÃO DA SIDEBAR */
+
+.sidebarembalagem {
+  width: 321px;
+}
+
+.sidebar {
+  position: sticky;
+  width: 293px;
+  padding: 28px;
+  padding-right: 0;
+  font-size: 12px;
+  position: sticky;
+  top: 56.5px;
+  box-sizing: border-box;
+}
+
+.sidebartop {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.sidebartop img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.sidebartop div h3:nth-child(1) {
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+  margin-bottom: 7px;
+}
+
+.texto {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  color: #8e8e8e;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.texto h3:nth-child(2) {
+  color: black;
+}
+
+.sugestoes {
+  display: flex;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sugestoes div {
+  display: flex;
+}
+
+.sugestoes div div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sugestoes img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 11px;
+}
+
+.sugestoes div h3:nth-child(1) {
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.sugestoes div h3:nth-child(2) {
+  font-weight: 300;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.sugestoes h2 {
+  color: #139ef2;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.mudar-nome{
+  display: flex;
+  gap: 3px;
+  box-sizing: border-box;
+  width: 100px;
+}
+
+.mudar-nome h3{
+  color: #8e8e8e !important;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mudar-nome h3:hover {
+  overflow: visible;
+}
+
+.mudar-nome ion-icon {
+  font-size: 14px;
+  color: #8e8e8e;
+
+}
+
+.sidebarbottom,
+.sidebarbottomcredits {
+  font-size: 11px;
+  font-weight: 400;
+  color: #c7c7c7;
+  margin-bottom: 18px;
+}
+
+.sidebarbottom:hover,
+.sugestoes div h3:nth-child(1):hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sidebar img:hover,
+.sidebar h2:hover,
+.texto h3:nth-child(2):hover,
+.sidebartop div h3:nth-child(1):hover {
+  cursor: pointer;
+}
+
+/* Responsividade */
+
+@media (min-width: 614px) and (max-width: 934px) {
+  .totaltopo {
+    width: 100%;
+  }
+  .topo {
+    width: 100%;
+    padding: 13px 15px;
+  }
+  .sidebarembalagem {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 613px) {
+  .mobile {
+    display: inline;
+  }
+  .bottombar {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 19px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    font-size: 25px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  .topo{
+    padding: 0;
+  }
+
+  .topo1 {
+    margin: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topo1 ion-icon {
+    font-size: 22px;
+  }
+
+.topo1 img{
+  margin-top: 6px;
+}
+
+  .desktop {
+    display: none;
+  }
+
+  .inferior {
+    padding-top: 58.5px;
+    display: block;
+    padding-bottom: 54px;
+  }
+
+  .totaltopo,
+  .topo,
+  .feed,
+  .stories,
+  .inferior {
+    width: 100%;
+  }
+
+  .sidebarembalagem,
+  .seta {
+    display: none;
+  }
+
+  .post,
+  .stories {
+    border-width: 0px;
+    border-bottom-width: 1px;
+  }
+
+  .stories {
+    background-color: inherit;
+    margin-bottom: 0;
+    overflow: scroll;
+  }
+
+  .stories::-webkit-scrollbar {
+    display: none;
+  }
+}

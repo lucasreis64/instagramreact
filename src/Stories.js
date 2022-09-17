@@ -1,0 +1,47 @@
+
+import naruto from "./images/naruto.jpg"
+import sasuke from "./images/sasuke.jpg"
+import vila from "./images/vila.jpg"
+import ninegag from "./images/9gag.jpeg"
+import meowed from "./images/meowed.jpeg"
+import barked from "./images/barked.jpeg"
+import nathanpyle from "./images/nathanpyle.jpeg"
+import wawawiwac from "./images/wawawiwac.jpeg"
+import respondeai from "./images/respondeai.jpeg"
+import filomoderna from "./images/filomoderna.jpeg"
+import memeriago from "./images/memeriago.jpeg"
+import fundoStories from "./images/fundoStories.png"
+
+export default function Stories () {
+    
+    const stories = [
+        {source: naruto, p: "naruto"},
+        {source: sasuke, p: "sasuke"},
+        {source: vila, p: "vila"},
+        {source: ninegag, p: "9gag"},
+        {source: meowed, p: "meowed"},
+        {source: barked, p: "barked"},
+        {source: nathanpyle, p: "nathanpyle"},
+        {source: wawawiwac, p: "wawawiwac"},
+        {source: respondeai, p: "respondeai"},
+        {source: filomoderna, p: "filomoderna"},
+        {source: memeriago, p: "memeriago"},
+    ]
+
+    const storiesMap =  stories.map((s)=><ConteudoStories source={s.source} p={s.p}/>)
+
+    return (
+        <div class="stories" id = 'mudar'>
+            {storiesMap}
+        </div>
+    )
+}
+function ConteudoStories(props){
+        return(
+        <div>
+            <img class="circulostories" src={fundoStories} alt = ""/>
+            <img class="imgstories" src={props.source} alt=""/>
+            <p>{props.p}</p>
+        </div>
+        )
+}
