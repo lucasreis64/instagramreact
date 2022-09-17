@@ -20,7 +20,6 @@ import React from "react"
 
 export default function Posts () {
     
-    let cont = false;
     const post = [
         {imgPerfil: naruto, nomePerfil: "naruto", imgPost: '' , videoPost: [narutoMP4, narutoOGV], likes: 356198,
         comentarios: [['viladafolha','Esse é o nosso hokage!!!'], ['sasuke','Feio demais.']]},
@@ -38,31 +37,42 @@ export default function Posts () {
 
     
     function PostConteudo(props){
-        const [likeBotao, setLikeBotao] = React.useState(<ion-icon name="heart-outline" onClick = {()=>likeContador()}></ion-icon>) 
-        const [like, setLike] = React.useState(props.likes)
+        const coracaoPreenchido = <ion-icon onClick = {()=>likeContador()} class = "vermelho" name="heart"></ion-icon>
+        const coracao = <ion-icon name="heart-outline" onClick = {()=>likeContador()}></ion-icon>
+        const savePreenchido = <ion-icon onClick = {()=>savePreenchimento()} name="bookmark"></ion-icon>
+        const save = <ion-icon onClick = {()=>savePreenchimento()} name="bookmark-outline"></ion-icon>
+        
+        let [saveBotao, setSaveBotao] = React.useState(false)
+        let [likeBotao, setLikeBotao] = React.useState(false) 
+        let [like, setLike] = React.useState(props.likes)
         const comentarioMap = props.comentarios.map((c) => <RenderComentario comentarios = {c} /> )
         let conteudoPost = '';
         
-        function likeContador() {
-            if (cont === false) {
-                setLike(like + 1)
-                setLikeBotao(<ion-icon onClick = {()=>likeContador()} class = "vermelho" name="heart"></ion-icon>)
-                cont = true
+        function savePreenchimento() {
+            if (saveBotao === false) {
+                setSaveBotao(true)
             }
-            else {setLike(like); cont = false; setLikeBotao(<ion-icon name="heart-outline" onClick = {()=>likeContador()}></ion-icon>)}
+            else {setSaveBotao(false)}
+        }
+
+        function likeContador() {
+            console.log(likeBotao)
+            if (likeBotao === false) {
+                setLike(like + 1)
+                setLikeBotao(true)
+
+            }
+            else {setLike(like - 1);  setLikeBotao(false);}
         }
 
         function likeContadorPost() {
-            if (cont === false) {
+            if (likeBotao === false) {
                 setLike(like + 1)
-                setLikeBotao(<ion-icon onClick = {()=>likeContador()} class = "vermelho" name="heart"></ion-icon>)
-                cont = true
+                setLikeBotao(true)
             }
         }
 
         function RenderVideo (props) {
-        
-            console.log(props.video)
             return(
             <video onClick = {()=>likeContadorPost()} loop="loop" autoPlay muted>
                 <source src={props.video[0]} type="video/mp4" />
@@ -72,13 +82,10 @@ export default function Posts () {
         }
         
         function RenderImage (props) {
-            console.log(props.image)
             return <img onClick = {()=>likeContadorPost()} src={props.image} alt=""/>
         }
             
         function RenderComentario (props) {
-            console.log(props.comentarios)
-            
             return(
             <div class="comentario">
                 <p>
@@ -104,11 +111,11 @@ export default function Posts () {
                 {conteudoPost}
                 <div class="postbottom1">
                     <div>
-                        {likeBotao}
+                        {likeBotao ? coracaoPreenchido : coracao}
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
+                    {saveBotao ? savePreenchido : save}
                 </div>
                 <div class="postbottom2">
                     <img src={vila} alt=""/>
