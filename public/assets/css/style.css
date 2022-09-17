@@ -151,6 +151,7 @@ ion-icon,
   left: 570px;
   top: 41px;
   filter: drop-shadow(2px 5px 4px darkgray);
+  visibility: visible;
 }
 
 #setaesquerda{
@@ -160,6 +161,7 @@ ion-icon,
   filter: drop-shadow(2px 5px 4px darkgray);
   top:41px;
   margin-left: 10px;
+  visibility: visible;
 }
 
 .stories div img:hover {
@@ -262,6 +264,7 @@ ion-icon,
 
 .postbottom1 ion-icon {
   font-size: 22px;
+  visibility: visible;
 }
 
 .comentario {
@@ -420,9 +423,14 @@ ion-icon,
   width: 100px;
 }
 
+.vermelho{
+  color: red;
+  visibility: visible !important;
+}
+
 .mudar-nome h3{
   color: #8e8e8e !important;
-  width: 100px;
+  max-width: 85px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
