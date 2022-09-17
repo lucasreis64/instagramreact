@@ -1,4 +1,4 @@
-Deploy da página: [a link](https://projeto7-instagramreact-ashy.vercel.app/)
+Deploy da página: [Projeto 7 -  InstagramReact](https://projeto7-instagramreact-ashy.vercel.app/)
 
 # Getting Started with Create React App
 
