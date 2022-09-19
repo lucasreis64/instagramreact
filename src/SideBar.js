@@ -1,10 +1,5 @@
-import badbivesmemes from "./images/badbivesmemes.jpeg"
-import chibirdart from "./images/bhibirdart.jpeg"
-import razoespara from "./images/razoespara.jpeg"
-import adorableanimals from "./images/adorableanimals.jpeg"
-import smallcutecats from "./images/smallcutecats.jpeg"
-
 import Usuario from "./Usuario"
+import Sugestoes from "./Sugestoes"
 
 
 export default function SideBar () {

@@ -1,3 +1,9 @@
+import badbivesmemes from "./images/badbivesmemes.jpeg"
+import chibirdart from "./images/bhibirdart.jpeg"
+import razoespara from "./images/razoespara.jpeg"
+import adorableanimals from "./images/adorableanimals.jpeg"
+import smallcutecats from "./images/smallcutecats.jpeg"
+
 export default function Sugestoes () {
     const sugestoes = [
         {source: badbivesmemes, user: "bad.vibes.memes", h3: "Segue você"},
