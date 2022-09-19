@@ -29,4 +29,6 @@ export default function Sugestoes () {
         </div>
         )
     }
+
+    return ({sugestoesMap})
 }
