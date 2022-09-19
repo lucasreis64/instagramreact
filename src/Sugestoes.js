@@ -30,5 +30,5 @@ export default function Sugestoes () {
         )
     }
 
-    return ({sugestoesMap})
+    return (sugestoesMap)
 }
