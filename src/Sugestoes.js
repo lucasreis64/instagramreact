@@ -17,7 +17,7 @@ export default function Sugestoes () {
 
     function RenderSugestoes (props) {
         return (
-        <div className="sugestoes">
+        <div class="sugestoes">
             <div>
             <img src={props.source} alt = ""/>
                 <div>

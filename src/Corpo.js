@@ -6,7 +6,7 @@ import SideBar from "./SideBar"
 import React from "react"
 
 export default function Corpo () {
-    const [seta, setSeta] = React.useState(<ion-icon   onClick={()=>rolarDireita()} id="seta" className="seta" name="chevron-forward-circle"></ion-icon>);
+    const [seta, setSeta] = React.useState(<ion-icon   onClick={()=>rolarDireita()} id="seta" class="seta" name="chevron-forward-circle"></ion-icon>);
     const position = 500
 
     function rolarDireita() {
@@ -26,15 +26,15 @@ export default function Corpo () {
             left: -position,
             behavior: 'smooth'
         });
-        setSeta(<ion-icon   onClick={()=>rolarDireita()} id="seta" className="seta" name="chevron-forward-circle"></ion-icon>)
+        setSeta(<ion-icon   onClick={()=>rolarDireita()} id="seta" class="seta" name="chevron-forward-circle"></ion-icon>)
     }
 
     return (
-        <div className="Pagina">
+        <div class="Pagina">
             <NavBar/>
             <BottomBar/>
-            <div className="inferior">
-                <div className="principal" id="principal">
+            <div class="inferior">
+                <div class="principal" id="principal">
                     <Stories/>
                     <Posts/> 
                     {seta}

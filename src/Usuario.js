@@ -30,11 +30,11 @@ export default function Usuario () {
     
     function SideBarRender () {
         return (
-            <div className="sidebartop">
+            <div class="sidebartop">
                 <img src={img} alt="" onClick={()=>mudarImagem()}/>
                 <div>
                     <h3><strong>{username}</strong></h3>
-                    <div className = "mudar-nome"><h3>{realname}</h3><ion-icon name="pencil-outline" onClick={()=>mudarNome()} /></div>
+                    <div class = "mudar-nome"><h3>{realname}</h3><ion-icon name="pencil-outline" onClick={()=>mudarNome()} /></div>
                 </div>
             </div>
         )
