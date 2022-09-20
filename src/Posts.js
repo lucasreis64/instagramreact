@@ -31,7 +31,7 @@ export default function Posts () {
         comentarios: [['respondeai','Demais!'], ['filomoderna','Animal!!!!']]}
     ]
     
-    const postMap = post.map((p)=><PostConteudo imgPerfil = {p.imgPerfil} nomePerfil = {p.nomePerfil} imgPost = {p.imgPost} 
+    const postMap = post.map((p, index)=><PostConteudo key={index} imgPerfil = {p.imgPerfil} nomePerfil = {p.nomePerfil} imgPost = {p.imgPost} 
     videoPost ={p.videoPost} likes = {p.likes} comentarios = {p.comentarios} />)
 
 
