@@ -1,6 +1,6 @@
 export default function BottomBar () {
     return (
-    <div class="bottombar mobile">
+    <div className="bottombar mobile">
         <ion-icon name="home"></ion-icon>
         <ion-icon name="search-outline"></ion-icon>
         <ion-icon name="add-circle-outline"></ion-icon>

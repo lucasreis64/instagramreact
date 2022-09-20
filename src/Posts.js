@@ -37,7 +37,7 @@ export default function Posts () {
 
     
     function PostConteudo(props){
-        const coracaoPreenchido = <ion-icon onClick = {()=>likeContador()} class = "vermelho" name="heart"></ion-icon>
+        const coracaoPreenchido = <ion-icon onClick = {()=>likeContador()} className = "vermelho" name="heart"></ion-icon>
         const coracao = <ion-icon name="heart-outline" onClick = {()=>likeContador()}></ion-icon>
         const savePreenchido = <ion-icon onClick = {()=>savePreenchimento()} name="bookmark"></ion-icon>
         const save = <ion-icon onClick = {()=>savePreenchimento()} name="bookmark-outline"></ion-icon>
@@ -87,7 +87,7 @@ export default function Posts () {
             
         function RenderComentario (props) {
             return(
-            <div class="comentario">
+            <div className="comentario">
                 <p>
                 <strong>{props.comentarios[0]} </strong>
                 {props.comentarios[1]}
@@ -100,8 +100,8 @@ export default function Posts () {
         if (props.videoPost === '') {conteudoPost = <RenderImage image = {props.imgPost}/>}
         else {conteudoPost = <RenderVideo video = {props.videoPost}/> }
         return (
-            <div class="post">
-                <div class="posttop">
+            <div className="post">
+                <div className="posttop">
                     <div>
                         <img src={props.imgPerfil} alt = ""/>
                         <h3><strong>{props.nomePerfil}</strong></h3>
@@ -109,7 +109,7 @@ export default function Posts () {
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
                 {conteudoPost}
-                <div class="postbottom1">
+                <div className="postbottom1">
                     <div>
                         {likeBotao ? coracaoPreenchido : coracao}
                         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -117,27 +117,27 @@ export default function Posts () {
                     </div>
                     {saveBotao ? savePreenchido : save}
                 </div>
-                <div class="postbottom2">
+                <div className="postbottom2">
                     <img src={vila} alt=""/>
                     <h3>Curtido por <strong>viladafolha</strong> e outras <strong>{like.toLocaleString('pt-BR')} pessoas</strong></h3>
                 </div>
                 {comentarioMap}
-                <div class="comentar">
+                <div className="comentar">
                     <div>
                         <ion-icon name="happy-outline"></ion-icon>
                         <input
-                        class="comentarinput"
+                        className="comentarinput"
                         type="text"
                         placeholder="Adicione um comentário..."/>
                     </div>
-                    <h2 class="publicar">Publicar</h2>
+                    <h2 className="publicar">Publicar</h2>
                 </div>
             </div>
         )
     }
 
     return (
-        <div class="feed">
+        <div className="feed">
             {postMap}
         </div>
     )

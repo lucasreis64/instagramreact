@@ -31,7 +31,7 @@ export default function Stories () {
     const storiesMap =  stories.map((s)=><ConteudoStories source={s.source} p={s.p}/>)
 
     return (
-        <div class="stories" id = 'mudar'>
+        <div className="stories" id = 'mudar'>
             {storiesMap}
         </div>
     )
@@ -39,8 +39,8 @@ export default function Stories () {
 function ConteudoStories(props){
         return(
         <div>
-            <img class="circulostories" src={fundoStories} alt = ""/>
-            <img class="imgstories" src={props.source} alt=""/>
+            <img className="circulostories" src={fundoStories} alt = ""/>
+            <img className="imgstories" src={props.source} alt=""/>
             <p>{props.p}</p>
         </div>
         )
