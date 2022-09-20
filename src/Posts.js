@@ -45,7 +45,7 @@ export default function Posts () {
         let [saveBotao, setSaveBotao] = React.useState(false)
         let [likeBotao, setLikeBotao] = React.useState(false) 
         let [like, setLike] = React.useState(props.likes)
-        const comentarioMap = props.comentarios.map((c) => <RenderComentario comentarios = {c} /> )
+        const comentarioMap = props.comentarios.map((c, index) => <RenderComentario key={index} comentarios = {c} /> )
         let conteudoPost = '';
         
         function savePreenchimento() {
