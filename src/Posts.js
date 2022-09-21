@@ -37,7 +37,7 @@ export default function Posts () {
 
     
     function PostConteudo(props){
-        const coracaoPreenchido = <ion-icon onClick = {()=>likeContador()} className = "vermelho" name="heart"></ion-icon>
+        const coracaoPreenchido = <ion-icon onClick = {()=>likeContador()} class = "vermelho" name="heart"></ion-icon>
         const coracao = <ion-icon name="heart-outline" onClick = {()=>likeContador()}></ion-icon>
         const savePreenchido = <ion-icon onClick = {()=>savePreenchimento()} name="bookmark"></ion-icon>
         const save = <ion-icon onClick = {()=>savePreenchimento()} name="bookmark-outline"></ion-icon>
