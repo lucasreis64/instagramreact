@@ -13,8 +13,6 @@ export default function Sugestoes () {
         {source: smallcutecats, user: "smallcutecats", h3: "Segue você"}
     ]
 
-    const sugestoesMap = sugestoes.map((s, index) => <RenderSugestoes key={index} source = {s.source} user = {s.user} h3 = {s.h3} />)
-
     function RenderSugestoes (props) {
         return (
         <div className="sugestoes">
@@ -30,5 +28,5 @@ export default function Sugestoes () {
         )
     }
 
-    return (sugestoesMap)
+    return (sugestoes.map((s, index) => <RenderSugestoes key={index} source = {s.source} user = {s.user} h3 = {s.h3} />))
 }

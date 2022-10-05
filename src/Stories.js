@@ -28,11 +28,9 @@ export default function Stories () {
         {source: memeriago, p: "memeriago"},
     ]
 
-    const storiesMap =  stories.map((s, index)=><ConteudoStories key={index} source={s.source} p={s.p}/>)
-
     return (
         <div className="stories" id = 'mudar'>
-            {storiesMap}
+            {stories.map((s, index)=><ConteudoStories key={index} source={s.source} p={s.p}/>)}
         </div>
     )
 }

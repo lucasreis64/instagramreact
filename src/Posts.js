@@ -31,11 +31,6 @@ export default function Posts () {
         comentarios: [['respondeai','Demais!'], ['filomoderna','Animal!!!!']]}
     ]
     
-    const postMap = post.map((p, index)=><PostConteudo key={index} imgPerfil = {p.imgPerfil} nomePerfil = {p.nomePerfil} imgPost = {p.imgPost} 
-    videoPost ={p.videoPost} likes = {p.likes} comentarios = {p.comentarios} />)
-
-
-    
     function PostConteudo(props){
         const coracaoPreenchido = <ion-icon onClick = {()=>likeContador()} class = "vermelho" name="heart"></ion-icon>
         const coracao = <ion-icon name="heart-outline" onClick = {()=>likeContador()}></ion-icon>
@@ -45,7 +40,6 @@ export default function Posts () {
         let [saveBotao, setSaveBotao] = React.useState(false)
         let [likeBotao, setLikeBotao] = React.useState(false) 
         let [like, setLike] = React.useState(props.likes)
-        const comentarioMap = props.comentarios.map((c, index) => <RenderComentario key={index} comentarios = {c} /> )
         let conteudoPost = '';
         
         function savePreenchimento() {
@@ -121,7 +115,7 @@ export default function Posts () {
                     <img src={vila} alt=""/>
                     <h3>Curtido por <strong>viladafolha</strong> e outras <strong>{like.toLocaleString('pt-BR')} pessoas</strong></h3>
                 </div>
-                {comentarioMap}
+                {props.comentarios.map((c, index) => <RenderComentario key={index} comentarios = {c} />)}
                 <div className="comentar">
                     <div>
                         <ion-icon name="happy-outline"></ion-icon>
@@ -138,7 +132,8 @@ export default function Posts () {
 
     return (
         <div className="feed">
-            {postMap}
+            {post.map((p, index)=><PostConteudo key={index} imgPerfil = {p.imgPerfil} nomePerfil = {p.nomePerfil} imgPost = {p.imgPost} 
+            videoPost ={p.videoPost} likes = {p.likes} comentarios = {p.comentarios} />)}
         </div>
     )
 }
